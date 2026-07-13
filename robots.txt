@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claytcg.com/sitemap.xml
