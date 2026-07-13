@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CLAY Co., Ltd. | Japanese Trading Card Exporter</title>
+    <title>CLAY TCG | Japanese Trading Card Export from Japan</title>
     <link
       rel="icon"
       href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%230b2e5e"/><path d="M17 18h30v28H17z" fill="%23ffffff"/><path d="M23 24h18M23 32h18M23 40h10" stroke="%23d62f2f" stroke-width="4" stroke-linecap="round"/></svg>'
     />
     <meta
       name="description"
-      content="CLAY Co., Ltd. exports Japanese trading cards to collectors and business partners worldwide."
+      content="CLAY Co., Ltd. exports Japanese trading cards from Japan worldwide with FedEx and DHL shipping. Join our Discord for stock, price lists, and buyer support."
     />
     <style>
       :root {
@@ -176,6 +176,37 @@
         color: var(--white);
       }
 
+      .hero-trust {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        width: min(760px, 100%);
+        margin-top: 42px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .hero-stat {
+        padding: 18px;
+        background: rgba(7, 25, 50, 0.54);
+      }
+
+      .hero-stat strong {
+        display: block;
+        font-size: clamp(24px, 4vw, 34px);
+        line-height: 1.1;
+      }
+
+      .hero-stat span {
+        display: block;
+        margin-top: 6px;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
       main {
         background: var(--white);
       }
@@ -223,6 +254,69 @@
         font-size: 17px;
       }
 
+      .discord-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        gap: 34px;
+        align-items: center;
+        padding: 34px;
+        border-radius: 8px;
+        color: var(--white);
+        background:
+          linear-gradient(135deg, rgba(11, 46, 94, 0.96), rgba(19, 85, 166, 0.9)),
+          linear-gradient(90deg, var(--red), var(--yellow));
+        box-shadow: var(--shadow);
+      }
+
+      .discord-panel h2,
+      .discord-panel p {
+        color: var(--white);
+      }
+
+      .discord-panel h2 {
+        margin-bottom: 14px;
+      }
+
+      .discord-list {
+        display: grid;
+        gap: 10px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .discord-list li {
+        display: flex;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .discord-list li::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 8px;
+        height: 8px;
+        margin-top: 11px;
+        border-radius: 999px;
+        background: var(--yellow);
+      }
+
+      .discord-card {
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .discord-card p {
+        margin: 0 0 18px;
+        font-size: 15px;
+      }
+
+      .discord-card .button {
+        width: 100%;
+      }
+
       .service-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -261,6 +355,34 @@
         font-size: 15px;
       }
 
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .metric {
+        padding: 26px 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--deep-blue);
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
       .countries {
         display: flex;
         flex-wrap: wrap;
@@ -275,6 +397,45 @@
         color: var(--deep-blue);
         font-size: 14px;
         font-weight: 700;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+
+      .process-step {
+        min-height: 172px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .process-step strong {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        color: var(--white);
+        background: var(--deep-blue);
+        font-size: 14px;
+      }
+
+      .process-step h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        line-height: 1.35;
+      }
+
+      .process-step p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
       }
 
       .profile-layout {
@@ -293,6 +454,39 @@
 
       .statement p {
         margin: 0;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .proof-card {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .proof-card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .proof-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .notice {
+        margin-top: 26px;
+        padding: 22px;
+        border-left: 5px solid var(--yellow);
+        background: #fff8df;
+        color: #4d3900;
+        font-size: 14px;
       }
 
       .company-table {
@@ -399,13 +593,21 @@
 
         .section-head,
         .profile-layout,
-        .contact-box {
+        .contact-box,
+        .discord-panel {
           grid-template-columns: 1fr;
           gap: 24px;
         }
 
-        .service-grid {
+        .hero-trust,
+        .service-grid,
+        .stats-grid,
+        .proof-grid {
           grid-template-columns: 1fr;
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .service-card {
@@ -422,6 +624,16 @@
           display: grid;
         }
       }
+
+      @media (max-width: 520px) {
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .discord-panel {
+          padding: 24px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -432,38 +644,78 @@
           <span>株式会社クレイ</span>
         </a>
         <div class="nav-links">
-          <a href="#business">Business</a>
-          <a href="#about">About</a>
+          <a href="#discord">Discord</a>
+          <a href="#track-record">Track Record</a>
+          <a href="#process">How It Works</a>
           <a href="#company">Company</a>
-          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
 
     <section id="top" class="hero">
       <div class="hero-inner">
-        <p class="eyebrow">Trading Cards Export Business</p>
-        <h1>Japanese trading cards, delivered to collectors worldwide.</h1>
+        <p class="eyebrow">Japanese TCG Export from Japan</p>
+        <h1>Join our Discord for Japanese TCG stock, prices, and export support.</h1>
         <p class="hero-copy">
-          CLAY Co., Ltd. exports Japanese trading cards, including Pokemon Card Game and ONE PIECE Card Game products, to customers and partners around the world.
+          CLAY Co., Ltd. is a Japan-based trading card export company shipping Pokemon Card Game, ONE PIECE Card Game, and other Japanese TCG products to buyers worldwide.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://discord.gg/UNxmMVdYY" target="_blank" rel="noopener">Join Discord</a>
-          <a class="button button-secondary" href="#business">View Business</a>
+          <a class="button button-primary" href="https://discord.gg/UNxmMVdYY" target="_blank" rel="noopener">Join Our Discord</a>
+          <a class="button button-secondary" href="#track-record">View Track Record</a>
+        </div>
+        <div class="hero-trust" aria-label="CLAY export highlights">
+          <div class="hero-stat">
+            <strong>5,000+</strong>
+            <span>shipments handled annually</span>
+          </div>
+          <div class="hero-stat">
+            <strong>DHL / FedEx</strong>
+            <span>international shipping support</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Same / Next Day</strong>
+            <span>standard dispatch after confirmation</span>
+          </div>
         </div>
       </div>
     </section>
 
     <main>
+      <section id="discord">
+        <div class="container">
+          <div class="discord-panel">
+            <div>
+              <p class="label" style="color: #f9d873">Discord Community</p>
+              <h2>Stock updates, price lists, and buyer support in one place.</h2>
+              <p class="lead">
+                Our Discord is the main contact point for overseas buyers. Join to check available products, request pricing, ask about shipping, and discuss ongoing orders directly with us.
+              </p>
+              <ul class="discord-list">
+                <li>Current stock and price list information</li>
+                <li>International shipping questions before ordering</li>
+                <li>Order discussions for collectors and business buyers</li>
+                <li>Updates for Japanese TCG sealed products and related items</li>
+              </ul>
+            </div>
+            <div class="discord-card">
+              <p>
+                Start here if you found us through Instagram. You can ask questions before making a purchase.
+              </p>
+              <a class="button button-primary" href="https://discord.gg/UNxmMVdYY" target="_blank" rel="noopener">Join Discord</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="business">
         <div class="container">
           <div class="section-head">
             <div>
               <p class="label">Business</p>
-              <h2>Export Business</h2>
+              <h2>Japanese TCG Export Business</h2>
             </div>
             <p class="lead">
-              We focus on trading cards with strong demand in Japan and connect them with overseas markets. Our operation is built around careful handling, reliable communication, and flexible worldwide shipping where available.
+              We focus on Japanese trading cards with global demand and connect them with overseas collectors, shops, and repeat buyers. Our operation is built around transparent communication, careful packing, and reliable international shipping.
             </p>
           </div>
 
@@ -474,7 +726,7 @@
               </div>
               <h3>Japanese Trading Cards</h3>
               <p>
-                We handle a wide range of Japanese trading cards, mainly Pokemon Card Game, ONE PIECE Card Game, and related collectible products.
+                Pokemon Card Game, ONE PIECE Card Game, Japanese TCG sealed products, and related collectible items.
               </p>
             </article>
 
@@ -484,7 +736,7 @@
               </div>
               <h3>International Shipping</h3>
               <p>
-                We primarily serve Australia, Canada, and the United States, while also supporting other countries and regions where shipping is available.
+                We ship with FedEx and DHL to supported countries and regions, including major markets in North America, Europe, Asia, and Oceania.
               </p>
             </article>
 
@@ -494,21 +746,151 @@
               </div>
               <h3>Global Trade Support</h3>
               <p>
-                We support overseas collectors and business buyers with careful packing, product management, and shipping that helps preserve collectible value.
+                We support collectors and business buyers with product discussions, packing, dispatch updates, and tracking information.
               </p>
             </article>
           </div>
 
           <div class="countries" aria-label="Main export destinations">
-            <span class="chip">Australia</span>
-            <span class="chip">Canada</span>
             <span class="chip">United States</span>
+            <span class="chip">Canada</span>
+            <span class="chip">Australia</span>
+            <span class="chip">United Kingdom</span>
+            <span class="chip">Switzerland</span>
+            <span class="chip">Netherlands</span>
+            <span class="chip">Hong Kong</span>
+            <span class="chip">France</span>
+            <span class="chip">Belgium</span>
+            <span class="chip">Singapore</span>
+            <span class="chip">Philippines</span>
+            <span class="chip">Brazil</span>
             <span class="chip">Worldwide Shipping</span>
           </div>
         </div>
       </section>
 
+      <section id="track-record" class="section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="label">Track Record</p>
+              <h2>Built for repeat international shipping.</h2>
+            </div>
+            <p class="lead">
+              We handle high-volume overseas shipping from Japan and support countries where FedEx and DHL service is available. Dispatch is usually same day or next day after confirmation.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="metric">
+              <strong>5,000+</strong>
+              <span>annual shipments handled</span>
+            </div>
+            <div class="metric">
+              <strong>12+</strong>
+              <span>listed destination markets, with broader coverage available</span>
+            </div>
+            <div class="metric">
+              <strong>DHL / FedEx</strong>
+              <span>shipping carrier support</span>
+            </div>
+            <div class="metric">
+              <strong>Same / Next Day</strong>
+              <span>standard dispatch timing after order confirmation</span>
+            </div>
+          </div>
+
+          <div class="notice">
+            Same-day or next-day dispatch applies to standard confirmed orders. Pre-orders, special sourcing requests, large-volume orders, and carrier schedule differences may require additional time.
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="label">How It Works</p>
+              <h2>Simple order flow through Discord.</h2>
+            </div>
+            <p class="lead">
+              Discord keeps communication visible and organized before an order is confirmed. Buyers can ask about products, shipping, and timing before moving forward.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <strong>1</strong>
+              <h3>Join Discord</h3>
+              <p>Enter the server from Instagram or this site.</p>
+            </article>
+            <article class="process-step">
+              <strong>2</strong>
+              <h3>Check Stock</h3>
+              <p>Review available Japanese TCG products and pricing.</p>
+            </article>
+            <article class="process-step">
+              <strong>3</strong>
+              <h3>Confirm Shipping</h3>
+              <p>Ask about destination, carrier, timing, and shipping cost.</p>
+            </article>
+            <article class="process-step">
+              <strong>4</strong>
+              <h3>Finalize Order</h3>
+              <p>Confirm quantity, product details, and payment terms.</p>
+            </article>
+            <article class="process-step">
+              <strong>5</strong>
+              <h3>Packing</h3>
+              <p>Products are prepared for international shipment.</p>
+            </article>
+            <article class="process-step">
+              <strong>6</strong>
+              <h3>Dispatch</h3>
+              <p>Tracking details are shared after shipment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="label">Trust & Transparency</p>
+              <h2>Designed to reduce uncertainty for overseas buyers.</h2>
+            </div>
+            <p class="lead">
+              We know Instagram traffic can feel risky for buyers. This page is structured to show who operates the business, what we ship, how orders work, and where communication happens.
+            </p>
+          </div>
+
+          <div class="proof-grid">
+            <article class="proof-card">
+              <h3>Registered Japanese Company</h3>
+              <p>CLAY Co., Ltd. is registered in Japan with corporate number 6011101113279 and a listed business address in Shinjuku, Tokyo.</p>
+            </article>
+            <article class="proof-card">
+              <h3>Clear Shipping Scope</h3>
+              <p>We support countries and regions where FedEx and DHL shipping is available, with key experience in North America, Europe, Asia, and Oceania.</p>
+            </article>
+            <article class="proof-card">
+              <h3>Order Discussion Before Purchase</h3>
+              <p>Buyers can ask questions through Discord before confirming an order, including availability, pricing, destination, and dispatch timing.</p>
+            </article>
+            <article class="proof-card">
+              <h3>Shipment Photos Coming Soon</h3>
+              <p>We will add packing and shipment photos after preparing the image set. This section is ready for real operational proof.</p>
+            </article>
+          </div>
+
+          <div class="notice">
+            CLAY Co., Ltd. is not affiliated with or endorsed by Pokemon, Nintendo, Creatures, GAME FREAK, Shueisha, Bandai, or any related official brand owners. Product names are used only to describe the trading card products handled.
+          </div>
+        </div>
+      </section>
+
+      <section id="mission">
         <div class="container profile-layout">
           <div>
             <p class="label">About Us</p>
@@ -516,7 +898,7 @@
           </div>
           <div class="statement">
             <p>
-              We aim to be a trusted export partner for the growing global demand for Japanese trading cards. We value the appeal of each collectible, the condition of every product, and the quality of each shipment as we connect Japan with collectors worldwide.
+              We aim to be a trusted export partner for the growing global demand for Japanese trading cards. We value clear communication, product condition, packing quality, and reliable dispatch as we connect Japan with collectors and buyers worldwide.
             </p>
           </div>
         </div>
@@ -530,7 +912,7 @@
               <h2>Company Profile</h2>
             </div>
             <p class="lead">
-              CLAY Co., Ltd. is based in Shinjuku, Tokyo, and operates primarily in the overseas export business.
+              CLAY Co., Ltd. is based in Shinjuku, Tokyo, and operates primarily in Japanese trading card export.
             </p>
           </div>
 
@@ -558,11 +940,15 @@
               </tr>
               <tr>
                 <th>Business</th>
-                <td>Export of Japanese trading cards and related collectible products</td>
+                <td>Export of Japanese trading cards, sealed products, and related collectible products</td>
               </tr>
               <tr>
                 <th>Destinations</th>
-                <td>Australia, Canada, the United States, and other countries or regions where shipping is available</td>
+                <td>United States, Canada, Australia, United Kingdom, Switzerland, Netherlands, Hong Kong, France, Belgium, Singapore, Philippines, Brazil, and other countries or regions where FedEx or DHL shipping is available</td>
+              </tr>
+              <tr>
+                <th>Dispatch</th>
+                <td>Same-day or next-day dispatch for standard confirmed orders. Pre-orders and special requests may require additional time.</td>
               </tr>
             </tbody>
           </table>
@@ -573,9 +959,9 @@
         <div class="container contact-box">
           <div>
             <p class="label" style="color: #f9d873">Contact</p>
-            <h2>Contact Us on Discord</h2>
+            <h2>Join Discord for stock, prices, and shipping questions.</h2>
             <p class="lead">
-              For product inquiries, international shipping, or ongoing business discussions, please join our Discord server.
+              If you came from Instagram, Discord is the best place to check current availability and talk with us before ordering.
             </p>
           </div>
           <a class="button contact-link" href="https://discord.gg/UNxmMVdYY" target="_blank" rel="noopener">Join Our Discord</a>
