@@ -480,6 +480,35 @@
         font-size: 15px;
       }
 
+      .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .photo-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .photo-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .photo-card figcaption {
+        padding: 12px 14px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
       .notice {
         margin-top: 26px;
         padding: 22px;
@@ -602,7 +631,8 @@
         .hero-trust,
         .service-grid,
         .stats-grid,
-        .proof-grid {
+        .proof-grid,
+        .photo-gallery {
           grid-template-columns: 1fr;
         }
 
@@ -880,8 +910,27 @@
             </article>
             <article class="proof-card">
               <h3>Shipment Photos Coming Soon</h3>
-              <p>We will add packing and shipment photos after preparing the image set. This section is ready for real operational proof.</p>
+              <p>Operational photos are shown below as practical proof of inventory, packing preparation, and shipment handling.</p>
             </article>
+          </div>
+
+          <div class="photo-gallery" aria-label="Operational photos">
+            <figure class="photo-card">
+              <img src="./assets/proof/packing-boxes.jpg" alt="Japanese trading card products packed inside a shipping carton" />
+              <figcaption>Packed sealed products ready for handling</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="./assets/proof/sealed-carton.jpg" alt="Sealed trading card products arranged inside a carton" />
+              <figcaption>Carton-level product preparation</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="./assets/proof/inventory-shelves.jpg" alt="Inventory shelves with Japanese trading card products" />
+              <figcaption>Japanese TCG inventory and stock display</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="./assets/proof/shipping-prep.jpg" alt="Shipping cartons prepared for outgoing orders" />
+              <figcaption>Outgoing shipment preparation</figcaption>
+            </figure>
           </div>
 
           <div class="notice">
