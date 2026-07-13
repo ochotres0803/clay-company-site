@@ -5,7 +5,6 @@ Static corporate website and Instagram landing page for CLAY Co., Ltd., a Japane
 ## Files
 
 - `index.html` - Main website
-- `assets/hero-trading-cards.png` - Hero image asset
 - `assets/proof/` - Operational proof photos for inventory, packing, and shipment preparation
 - `assets/video/packing-highlight.mp4` - Lightweight packing process video used on the site
 - `privacy.html`, `terms.html`, `commercial-transaction.html`, `shipping-customs.html`, `disclaimer.html` - Legal and trust pages
