@@ -318,7 +318,7 @@
 
       .quick-team {
         display: grid;
-        grid-template-columns: minmax(260px, 0.45fr) minmax(0, 0.55fr);
+        grid-template-columns: minmax(240px, 0.38fr) minmax(0, 0.62fr);
         gap: 28px;
         align-items: center;
       }
@@ -333,9 +333,9 @@
       .quick-team-photo img {
         display: block;
         width: 100%;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 24%;
       }
 
       .mini-team {
@@ -612,7 +612,7 @@
       }
 
       .discord-preview-grid {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(4, 1fr);
         gap: 12px;
         margin-top: 22px;
@@ -668,7 +668,7 @@
 
       .contact-options {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 12px;
         margin-top: 24px;
       }
@@ -718,9 +718,9 @@
       .team-card img {
         display: block;
         width: 100%;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 24%;
       }
 
       .team-body {
@@ -1034,7 +1034,6 @@
               <span class="signal">Registered Japanese corporation</span>
               <span class="signal">Tokyo-based team</span>
               <span class="signal">FedEx / DHL worldwide shipping</span>
-              <span class="signal">5,000+ shipments handled by our team</span>
             </div>
           </div>
           <div class="hero-visual" aria-label="CLAY TCG packing video">
@@ -1061,7 +1060,7 @@
       <div class="proof-bar" aria-label="CLAY TCG trust indicators">
         <div class="proof-row">
           <div class="proof-item"><strong>Japanese Corporation</strong>Corporate No. 6011101113279</div>
-          <div class="proof-item"><strong>Tokyo Team</strong>Based in Shinjuku, Japan</div>
+          <div class="proof-item"><strong>Tokyo Team</strong>Based in Tokyo, Japan</div>
           <div class="proof-item"><strong>FedEx &amp; DHL</strong>Shipping options confirmed before payment</div>
           <div class="proof-item"><strong>5,000+ Shipments</strong>Handled by our team</div>
         </div>
@@ -1070,6 +1069,7 @@
       <section id="quick-team">
         <div class="container quick-team">
           <div class="quick-team-photo">
+            <!-- TODO: Replace this fallback photo with assets/team/ryotaro-with-stock.webp after shooting. Recommended: Ryotaro with Japanese TCG products, inventory shelves, and real office/work environment. Size: 1200x1500px, vertical 4:5. -->
             <img src="./assets/team/ryotaro.jpg" width="601" height="900" alt="Ryotaro from CLAY TCG, Tokyo Japan team representative" />
           </div>
           <div>
@@ -1114,12 +1114,24 @@
               <a class="button button-primary" href="https://discord.gg/UNxmMVdYY" data-discord-link data-event="discord_click_community" aria-label="Join the free CLAY TCG Discord and check current stock">Join Free &amp; Check Current Stock</a>
             </div>
           </div>
-          <!-- TODO: Replace these Discord preview placeholders with masked screenshots. Recommended files: assets/discord-new-arrivals.webp, assets/discord-stock-list.webp, assets/discord-order-ticket.webp, assets/discord-shipping-update.webp. Recommended size: 1200x900px or 4:3. Hide usernames, addresses, order totals, and private customer details. -->
-          <div class="discord-preview-grid" aria-label="Discord screenshot placeholders">
-            <div class="discord-preview"><strong>New arrivals</strong><span>TODO: add masked Discord screenshot.</span></div>
-            <div class="discord-preview"><strong>Stock list</strong><span>TODO: add masked stock and price post.</span></div>
-            <div class="discord-preview"><strong>Order ticket</strong><span>TODO: add masked order flow screenshot.</span></div>
-            <div class="discord-preview"><strong>Shipping update</strong><span>TODO: add masked shipment post.</span></div>
+          <!-- TODO: Replace these Discord preview placeholders with masked screenshots. Recommended files: assets/discord-new-arrivals.webp, assets/discord-stock-list.webp, assets/discord-order-ticket.webp, assets/discord-shipping-update.webp. Recommended size: 1200x900px or 4:3. Hide usernames, addresses, order totals, and private customer details. Keep this grid hidden until screenshots are ready; on mobile, consider horizontal swipe, a 2-column grid, or showing only the strongest 2 screenshots to avoid an overly long Instagram in-app browser page. -->
+          <div class="discord-preview-grid" aria-label="Discord screenshot examples" hidden>
+            <figure class="discord-preview">
+              <img data-path="./assets/discord-new-arrivals.webp" width="1200" height="900" alt="Masked CLAY TCG Discord new arrivals example" loading="lazy" />
+              <figcaption>New arrivals</figcaption>
+            </figure>
+            <figure class="discord-preview">
+              <img data-path="./assets/discord-stock-list.webp" width="1200" height="900" alt="Masked CLAY TCG Discord stock list example" loading="lazy" />
+              <figcaption>Stock list</figcaption>
+            </figure>
+            <figure class="discord-preview">
+              <img data-path="./assets/discord-order-ticket.webp" width="1200" height="900" alt="Masked CLAY TCG Discord order ticket example" loading="lazy" />
+              <figcaption>Order ticket</figcaption>
+            </figure>
+            <figure class="discord-preview">
+              <img data-path="./assets/discord-shipping-update.webp" width="1200" height="900" alt="Masked CLAY TCG Discord shipping update example" loading="lazy" />
+              <figcaption>Shipping update</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -1378,19 +1390,9 @@
               <span>Use Discord for current stock, price updates, pre-orders, shipping support, and questions before ordering.</span>
               <a href="https://discord.gg/UNxmMVdYY" data-discord-link data-event="company_contact_discord">Join Discord</a>
             </article>
-            <article class="contact-option">
-              <strong>General inquiries</strong>
-              <span>ocho.tres.soccer@gmail.com</span>
-              <a href="mailto:ocho.tres.soccer@gmail.com">Send Email</a>
-            </article>
-            <article class="contact-option">
-              <strong>Official Instagram</strong>
-              <span>TODO: Add official Instagram URL after the account is finalized.</span>
-            </article>
-            <article class="contact-option">
-              <strong>Response hours</strong>
-              <span>Japan-based team. TODO: Add official response hours.</span>
-            </article>
+            <!-- TODO: Add official support email -->
+            <!-- TODO: Add official Instagram URL -->
+            <!-- TODO: Add official business response hours -->
           </div>
           <table class="company-table">
             <tbody>
@@ -1417,8 +1419,7 @@
               <tr>
                 <th>Contact</th>
                 <td>
-                  <a href="https://discord.gg/UNxmMVdYY" data-discord-link data-event="company_information_click">Discord contact for stock, quotes, shipping, and order questions</a><br />
-                  General inquiries: <a href="mailto:ocho.tres.soccer@gmail.com">ocho.tres.soccer@gmail.com</a>
+                  <a href="https://discord.gg/UNxmMVdYY" data-discord-link data-event="company_information_click">Discord contact for stock, quotes, shipping, and order questions</a>
                 </td>
               </tr>
             </tbody>
