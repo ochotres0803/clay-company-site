@@ -557,6 +557,10 @@
         margin-bottom: 0;
       }
 
+      .grid-3 .video-feature {
+        margin-bottom: 0;
+      }
+
       .proof-photo-stack {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -757,6 +761,17 @@
         font-weight: 900;
       }
 
+      .team-card img {
+        display: block;
+        width: 54px;
+        height: 54px;
+        border: 2px solid var(--paper);
+        border-radius: 999px;
+        object-fit: cover;
+        object-position: center 18%;
+        box-shadow: 0 6px 16px rgba(17, 24, 39, 0.1);
+      }
+
       .team-body {
         padding: 0;
       }
@@ -942,6 +957,12 @@
 
         .footer-links {
           justify-content: flex-start;
+        }
+
+        .grid-3 .video-feature {
+          grid-template-columns: 108px minmax(0, 1fr);
+          gap: 14px;
+          padding: 14px;
         }
       }
 
@@ -1232,9 +1253,27 @@
               <h3>Japanese TCG Stock</h3>
               <p>Our Tokyo-based team handles Japanese TCG products and confirms availability before each order proceeds.</p>
             </article>
-            <article class="card">
-              <h3>Careful Packing</h3>
-              <p>Orders are prepared for international handling with product protection and carton conditions confirmed before dispatch.</p>
+            <article class="card video-feature">
+              <div class="video-shell">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="./assets/video/packing-poster.jpg"
+                  width="540"
+                  height="960"
+                  aria-label="CLAY TCG packing process video"
+                >
+                  <source src="./assets/video/packing-highlight.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="video-copy">
+                <p class="label">Packing Process</p>
+                <h3>Careful Packing</h3>
+                <p>Products are prepared for international handling before shipment.</p>
+              </div>
             </article>
             <article class="card">
               <h3>FedEx / DHL Shipping</h3>
@@ -1301,7 +1340,7 @@
           </div>
           <div class="team-grid">
             <article class="team-card">
-              <span class="team-initial" aria-hidden="true">R</span>
+              <img src="./assets/team/ryotaro.jpg" width="601" height="900" alt="Ryotaro, company representative of CLAY Co., Ltd." loading="lazy" />
               <div class="team-body">
                 <h3>Ryotaro</h3>
                 <span class="team-role">Company Representative</span>
@@ -1309,7 +1348,7 @@
               </div>
             </article>
             <article class="team-card">
-              <span class="team-initial" aria-hidden="true">S</span>
+              <img src="./assets/team/shohei.jpg" width="601" height="900" alt="Shohei, CLAY staff member" loading="lazy" />
               <div class="team-body">
                 <h3>Shohei</h3>
                 <span class="team-role">CLAY Staff</span>
@@ -1317,7 +1356,7 @@
               </div>
             </article>
             <article class="team-card">
-              <span class="team-initial" aria-hidden="true">M</span>
+              <img src="./assets/team/momoko.jpg" width="601" height="900" alt="Momoko, known as Momochi, CLAY community staff" loading="lazy" />
               <div class="team-body">
                 <h3>Momoko <span style="font-weight: 700; color: var(--muted)">(Momochi)</span></h3>
                 <span class="team-role">Community Staff</span>
@@ -1325,7 +1364,7 @@
               </div>
             </article>
             <article class="team-card">
-              <span class="team-initial" aria-hidden="true">M</span>
+              <img src="./assets/team/minami.jpg" width="601" height="900" alt="Minami, public relations staff for CLAY" loading="lazy" />
               <div class="team-body">
                 <h3>Minami</h3>
                 <span class="team-role">Public Relations</span>
