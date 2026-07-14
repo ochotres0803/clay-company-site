@@ -318,12 +318,13 @@
 
       .quick-team {
         display: grid;
-        grid-template-columns: minmax(240px, 0.38fr) minmax(0, 0.62fr);
+        grid-template-columns: minmax(260px, 0.46fr) minmax(0, 0.54fr);
         gap: 28px;
         align-items: center;
       }
 
       .quick-team-photo {
+        position: relative;
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -333,9 +334,49 @@
       .quick-team-photo img {
         display: block;
         width: 100%;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 10;
         object-fit: cover;
-        object-position: center 24%;
+        object-position: center;
+      }
+
+      .quick-team-avatar {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: calc(100% - 36px);
+        padding: 10px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 999px;
+        color: var(--paper);
+        background: rgba(7, 25, 46, 0.82);
+        box-shadow: 0 14px 30px rgba(7, 25, 46, 0.25);
+        backdrop-filter: blur(10px);
+      }
+
+      .quick-team-avatar img {
+        width: 54px;
+        height: 54px;
+        aspect-ratio: 1 / 1;
+        border: 2px solid var(--paper);
+        border-radius: 999px;
+        object-fit: cover;
+        object-position: center 18%;
+      }
+
+      .quick-team-avatar strong,
+      .quick-team-avatar span {
+        display: block;
+        line-height: 1.2;
+      }
+
+      .quick-team-avatar span {
+        margin-top: 2px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 12px;
+        font-weight: 800;
       }
 
       .mini-team {
@@ -351,7 +392,7 @@
         border: 2px solid var(--paper);
         border-radius: 999px;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 18%;
         box-shadow: 0 6px 16px rgba(17, 24, 39, 0.12);
       }
 
@@ -703,28 +744,33 @@
 
       .team-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
       }
 
       .team-card {
-        overflow: hidden;
+        display: grid;
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--paper);
+        padding: 14px;
         box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
       }
 
       .team-card img {
         display: block;
-        width: 100%;
-        aspect-ratio: 4 / 3;
+        width: 76px;
+        height: 76px;
+        border-radius: 999px;
         object-fit: cover;
-        object-position: center 24%;
+        object-position: center 18%;
       }
 
       .team-body {
-        padding: 18px;
+        padding: 0;
       }
 
       .team-body h3 {
@@ -906,6 +952,15 @@
           grid-template-columns: 1fr;
         }
 
+        .team-card {
+          grid-template-columns: 64px minmax(0, 1fr);
+        }
+
+        .team-card img {
+          width: 64px;
+          height: 64px;
+        }
+
         .proof-photo-stack {
           grid-template-columns: 1fr;
         }
@@ -1069,8 +1124,15 @@
       <section id="quick-team">
         <div class="container quick-team">
           <div class="quick-team-photo">
-            <!-- TODO: Replace this fallback photo with assets/team/ryotaro-with-stock.webp after shooting. Recommended: Ryotaro with Japanese TCG products, inventory shelves, and real office/work environment. Size: 1200x1500px, vertical 4:5. -->
-            <img src="./assets/team/ryotaro.jpg" width="601" height="900" alt="Ryotaro from CLAY TCG, Tokyo Japan team representative" />
+            <!-- TODO: Replace this fallback inventory photo with assets/team/ryotaro-with-stock.webp after shooting. Recommended for this slot: Ryotaro with Japanese TCG products, inventory shelves, and real office/work environment. Prefer a landscape crop around 1600x1000px so it does not feel like a stretched portrait. -->
+            <img src="./assets/proof/inventory-shelves.jpg" width="800" height="650" alt="Japanese TCG inventory handled by the CLAY Tokyo team" />
+            <div class="quick-team-avatar" aria-label="Ryotaro, company representative">
+              <img src="./assets/team/ryotaro.jpg" width="601" height="900" alt="Ryotaro from CLAY TCG" />
+              <div>
+                <strong>Ryotaro</strong>
+                <span>Company Representative</span>
+              </div>
+            </div>
           </div>
           <div>
             <p class="label">Tokyo Team</p>
