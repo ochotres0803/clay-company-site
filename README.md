@@ -7,6 +7,7 @@ Static corporate website and Instagram landing page for CLAY Co., Ltd., a Japane
 - `index.html` - Main website
 - `assets/proof/` - Operational proof photos for inventory, packing, and shipment preparation
 - `assets/video/packing-highlight.mp4` - Lightweight packing process video used on the site
+- `assets/team/` - Team member photos for the staff introduction section
 - `privacy.html`, `terms.html`, `commercial-transaction.html`, `shipping-customs.html`, `disclaimer.html` - Legal and trust pages
 - `robots.txt`, `sitemap.xml`, `404.html` - Search and site support files
 
