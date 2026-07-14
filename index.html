@@ -258,18 +258,20 @@
       }
 
       .hero-video-card video,
+      .hero-video-card img,
       .hero-photo-card img {
         display: block;
         width: 100%;
         object-fit: cover;
       }
 
-      .hero-video-card video {
-        aspect-ratio: 9 / 12;
+      .hero-video-card video,
+      .hero-video-card img {
+        aspect-ratio: 16 / 10;
       }
 
       .hero-photo-row {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
       }
@@ -318,7 +320,8 @@
 
       .quick-team {
         display: grid;
-        grid-template-columns: minmax(260px, 0.46fr) minmax(0, 0.54fr);
+        grid-template-columns: 1fr;
+        max-width: 860px;
         gap: 28px;
         align-items: center;
       }
@@ -502,11 +505,11 @@
 
       .video-feature {
         display: grid;
-        grid-template-columns: minmax(260px, 0.56fr) minmax(0, 0.44fr);
-        gap: 24px;
+        grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+        gap: 18px;
         align-items: center;
         margin-bottom: 24px;
-        padding: 24px;
+        padding: 18px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: var(--paper);
@@ -547,7 +550,7 @@
       .photo-card img {
         display: block;
         width: 100%;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 10;
         object-fit: cover;
       }
 
@@ -561,7 +564,7 @@
 
       .proof-mosaic {
         display: grid;
-        grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+        grid-template-columns: 1fr;
         gap: 16px;
         align-items: stretch;
       }
@@ -573,7 +576,7 @@
 
       .proof-photo-stack {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         gap: 14px;
       }
 
@@ -961,8 +964,14 @@
           height: 64px;
         }
 
+        .video-feature {
+          grid-template-columns: 110px minmax(0, 1fr);
+          gap: 14px;
+          padding: 14px;
+        }
+
         .proof-photo-stack {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
         }
 
         .footer-links {
@@ -1091,22 +1100,10 @@
               <span class="signal">FedEx / DHL worldwide shipping</span>
             </div>
           </div>
-          <div class="hero-visual" aria-label="CLAY TCG packing video">
+          <div class="hero-visual" aria-label="Japanese trading card products handled by CLAY TCG">
             <div class="hero-video-card">
-              <video autoplay muted loop playsinline preload="metadata" poster="./assets/video/packing-poster.jpg" width="540" height="960">
-                <source src="./assets/video/packing-highlight.mp4" type="video/mp4" />
-              </video>
-              <div class="hero-media-caption">Actual packing process for Japanese TCG products in Japan</div>
-            </div>
-            <div class="hero-photo-row">
-              <div class="hero-photo-card">
-                <img src="./assets/proof/inventory-shelves.jpg" width="800" height="650" alt="Japanese TCG products in CLAY inventory" />
-                <div class="hero-media-caption">Real stock</div>
-              </div>
-              <div class="hero-photo-card">
-                <img src="./assets/proof/shipping-prep.jpg" width="800" height="650" alt="Outgoing shipment cartons prepared by CLAY" />
-                <div class="hero-media-caption">Dispatch prep</div>
-              </div>
+              <img src="./assets/hero-trading-cards.png" width="1672" height="941" alt="Japanese trading card products handled by CLAY TCG" />
+              <div class="hero-media-caption">Japanese TCG products sourced from Japan</div>
             </div>
           </div>
         </div>
@@ -1123,17 +1120,6 @@
 
       <section id="quick-team">
         <div class="container quick-team">
-          <div class="quick-team-photo">
-            <!-- TODO: Replace this fallback inventory photo with assets/team/ryotaro-with-stock.webp after shooting. Recommended for this slot: Ryotaro with Japanese TCG products, inventory shelves, and real office/work environment. Prefer a landscape crop around 1600x1000px so it does not feel like a stretched portrait. -->
-            <img src="./assets/proof/inventory-shelves.jpg" width="800" height="650" alt="Japanese TCG inventory handled by the CLAY Tokyo team" />
-            <div class="quick-team-avatar" aria-label="Ryotaro, company representative">
-              <img src="./assets/team/ryotaro.jpg" width="601" height="900" alt="Ryotaro from CLAY TCG" />
-              <div>
-                <strong>Ryotaro</strong>
-                <span>Company Representative</span>
-              </div>
-            </div>
-          </div>
           <div>
             <p class="label">Tokyo Team</p>
             <h2>Meet the Real Team Behind CLAY TCG</h2>
